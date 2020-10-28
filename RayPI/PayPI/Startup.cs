@@ -9,6 +9,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using Microsoft.OpenApi.Models;
 
 namespace PayPI
 {
@@ -25,6 +26,19 @@ namespace PayPI
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+
+            //Ìí¼ÓSwagger
+            services.AddSwaggerGen(c =>
+            {
+                c.SwaggerDoc("v1", new OpenApiInfo
+                {
+                    Version = "v1.0",
+                    Title = "Ray WebApi",
+                    Description = "¿ò¼Ü¼¯ºÏ",
+                    Contact = new OpenApiContact
+                    { Name = "Ray", Email = "xuhaixia200@163.com" }
+                });
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -34,6 +48,12 @@ namespace PayPI
             {
                 app.UseDeveloperExceptionPage();
             }
+            app.UseSwagger();
+            app.UseSwaggerUI(c => {
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "ApiHelp V1");
+            });
+
+
 
             app.UseRouting();
 
