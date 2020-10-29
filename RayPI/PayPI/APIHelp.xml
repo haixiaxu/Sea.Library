@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>PayPI</name>
+    </assembly>
+    <members>
+        <member name="T:PayPI.Controllers.WeatherForecastController">
+            <summary>
+            测试接口
+            </summary>
+        </member>
+        <member name="M:PayPI.Controllers.WeatherForecastController.#ctor(Microsoft.Extensions.Logging.ILogger{PayPI.Controllers.WeatherForecastController})">
+            <summary>
+            
+            </summary>
+            <param name="logger"></param>
+        </member>
+        <member name="M:PayPI.Controllers.WeatherForecastController.Get">
+            <summary>
+            获取全部
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:PayPI.Startup">
+            <summary>
+            应用程序所需的嵌入式自定义服务
+            </summary>
+        </member>
+        <member name="M:PayPI.Startup.#ctor(Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            
+            </summary>
+            <param name="configuration"></param>
+        </member>
+    </members>
+</doc>

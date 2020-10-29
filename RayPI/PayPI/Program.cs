@@ -17,7 +17,9 @@ namespace PayPI
         }
 
         public static IHostBuilder CreateHostBuilder(string[] args) =>
+            ////asp.net core使用它来配置应用程序配置,日记记录和依赖注入容器
             Host.CreateDefaultBuilder(args)
+            //添加典型的asp.net core应用程序所需的其他所有内容
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
                     webBuilder.UseStartup<Startup>();
