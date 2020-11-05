@@ -1,18 +1,13 @@
-using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 using System.Reflection;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.PlatformAbstractions;
 using Microsoft.OpenApi.Models;
+using PayPI.SwaggerHelp;
 
 namespace PayPI
 {
@@ -53,7 +48,11 @@ namespace PayPI
                 var xmlPath = Path.Combine(xmlFile, "APIHelp.xml");
                 var xmlFil =$"{ Assembly.GetExecutingAssembly().GetName().Name}.xml";
                 //var XMLPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
-                c.IncludeXmlComments(xmlPath);
+
+                //添加对控制器的标签描述 (true表示显示控制器注释)
+                c.IncludeXmlComments(xmlPath,true);
+                //添加对控制器的标签描述
+              //  c.DocumentFilter<SwaggerDocTag>();
             });
 
             services.AddControllers();
