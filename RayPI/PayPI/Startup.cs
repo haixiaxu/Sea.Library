@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using System.IO;
 using System.Reflection;
 using Microsoft.AspNetCore.Builder;
@@ -30,7 +31,7 @@ namespace PayPI
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-         
+
 
             //添加Swagger
             services.AddSwaggerGen(c =>
@@ -46,13 +47,39 @@ namespace PayPI
                 //添加读取注释服务
                 var xmlFile = PlatformServices.Default.Application.ApplicationBasePath;
                 var xmlPath = Path.Combine(xmlFile, "APIHelp.xml");
-                var xmlFil =$"{ Assembly.GetExecutingAssembly().GetName().Name}.xml";
+                var xmlFil = $"{ Assembly.GetExecutingAssembly().GetName().Name}.xml";
                 //var XMLPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
 
                 //添加对控制器的标签描述 (true表示显示控制器注释)
-                c.IncludeXmlComments(xmlPath,true);
+                c.IncludeXmlComments(xmlPath, true);
                 //添加对控制器的标签描述
-              //  c.DocumentFilter<SwaggerDocTag>();
+                //  c.DocumentFilter<SwaggerDocTag>();
+
+
+                //添加header验证信息
+                c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
+                {
+                    Description = "JWT授权(数据将在请求头中进行传输)直接在下框中输入Bearer {token} (注意两者之前是一个空格) \"",
+                    Name = "Authorization",
+                    In = ParameterLocation.Header,
+                    Type = SecuritySchemeType.ApiKey,
+                    BearerFormat = "JWT",
+                    Scheme = "Bearer"
+                });
+                c.AddSecurityRequirement(new OpenApiSecurityRequirement() 
+                {
+                    {
+                        new OpenApiSecurityScheme
+                        {
+                            Reference=new OpenApiReference
+                              {
+                                Type=ReferenceType.SecurityScheme,
+                                Id="Bearer"
+                              }
+                        },new string[]{ }
+                    }
+                });
+
             });
 
             services.AddControllers();
@@ -67,7 +94,8 @@ namespace PayPI
                 app.UseDeveloperExceptionPage();
             }
             app.UseSwagger();
-            app.UseSwaggerUI(c => {
+            app.UseSwaggerUI(c =>
+            {
                 c.SwaggerEndpoint("/swagger/v1/swagger.json", "ApiHelp V1");
                 //将RoutePrefix属性设置为空
                 c.RoutePrefix = string.Empty;
