@@ -3,7 +3,21 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30011.22
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PayPI", "PayPI\PayPI.csproj", "{0C694435-DC83-40CD-856B-02F148D0C0A1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PayPI", "PayPI\PayPI.csproj", "{0C694435-DC83-40CD-856B-02F148D0C0A1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RayPI.Business", "RayPI.Business\RayPI.Business.csproj", "{7B7EA71A-594F-4988-A7F1-2D59F5935F2C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RayPI.Entity", "RayPI.Entity\RayPI.Entity.csproj", "{86C04F77-C8DB-444C-83A1-0844A064E9B4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RayPI.IService", "RayPI.IService\RayPI.IService.csproj", "{0CE4DAB4-3845-4CFE-981E-392A6E49AAB0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RayPI.Model", "RayPI.Model\RayPI.Model.csproj", "{C88C0C7F-D82F-4EE0-8C88-910FF8209706}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RayPI.Service", "RayPI.Service\RayPI.Service.csproj", "{42E84532-F8AB-44D3-8101-A387ED92B119}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RayPI.Token", "RayPI.Token\RayPI.Token.csproj", "{46C62F4C-2B43-4A12-B7AE-EEFFAC3F76AD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SqlSugar", "SqlSugar\SqlSugar.csproj", "{4461F6FB-E8F6-44E5-A362-6AAA534C110B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +29,34 @@ Global
 		{0C694435-DC83-40CD-856B-02F148D0C0A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0C694435-DC83-40CD-856B-02F148D0C0A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0C694435-DC83-40CD-856B-02F148D0C0A1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7B7EA71A-594F-4988-A7F1-2D59F5935F2C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7B7EA71A-594F-4988-A7F1-2D59F5935F2C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7B7EA71A-594F-4988-A7F1-2D59F5935F2C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7B7EA71A-594F-4988-A7F1-2D59F5935F2C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{86C04F77-C8DB-444C-83A1-0844A064E9B4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{86C04F77-C8DB-444C-83A1-0844A064E9B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{86C04F77-C8DB-444C-83A1-0844A064E9B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{86C04F77-C8DB-444C-83A1-0844A064E9B4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0CE4DAB4-3845-4CFE-981E-392A6E49AAB0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0CE4DAB4-3845-4CFE-981E-392A6E49AAB0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0CE4DAB4-3845-4CFE-981E-392A6E49AAB0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0CE4DAB4-3845-4CFE-981E-392A6E49AAB0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C88C0C7F-D82F-4EE0-8C88-910FF8209706}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C88C0C7F-D82F-4EE0-8C88-910FF8209706}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C88C0C7F-D82F-4EE0-8C88-910FF8209706}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C88C0C7F-D82F-4EE0-8C88-910FF8209706}.Release|Any CPU.Build.0 = Release|Any CPU
+		{42E84532-F8AB-44D3-8101-A387ED92B119}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{42E84532-F8AB-44D3-8101-A387ED92B119}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{42E84532-F8AB-44D3-8101-A387ED92B119}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{42E84532-F8AB-44D3-8101-A387ED92B119}.Release|Any CPU.Build.0 = Release|Any CPU
+		{46C62F4C-2B43-4A12-B7AE-EEFFAC3F76AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{46C62F4C-2B43-4A12-B7AE-EEFFAC3F76AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{46C62F4C-2B43-4A12-B7AE-EEFFAC3F76AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{46C62F4C-2B43-4A12-B7AE-EEFFAC3F76AD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4461F6FB-E8F6-44E5-A362-6AAA534C110B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4461F6FB-E8F6-44E5-A362-6AAA534C110B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4461F6FB-E8F6-44E5-A362-6AAA534C110B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4461F6FB-E8F6-44E5-A362-6AAA534C110B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
