@@ -4,4 +4,13 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="Client\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\RayPI.IService\RayPI.IService.csproj" />
+    <ProjectReference Include="..\RayPI.Service\RayPI.Service.csproj" />
+  </ItemGroup>
+
 </Project>

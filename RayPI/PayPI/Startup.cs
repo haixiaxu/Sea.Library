@@ -45,13 +45,14 @@ namespace PayPI
                     { Name = "Ray", Email = "xuhaixia200@163.com" }
                 });
                 //添加读取注释服务
-                var xmlFile = PlatformServices.Default.Application.ApplicationBasePath;
-                var xmlPath = Path.Combine(xmlFile, "APIHelp.xml");
+                var basePath = PlatformServices.Default.Application.ApplicationBasePath;
+                var apiXmlPath = Path.Combine(basePath, "APIHelp.xml");
+                var entityXmlPath = Path.Combine(basePath, "EntityHelp.xml");
                 var xmlFil = $"{ Assembly.GetExecutingAssembly().GetName().Name}.xml";
                 //var XMLPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
 
                 //添加对控制器的标签描述 (true表示显示控制器注释)
-                c.IncludeXmlComments(xmlPath, true);
+                c.IncludeXmlComments(apiXmlPath, true);
                 //添加对控制器的标签描述
                 //  c.DocumentFilter<SwaggerDocTag>();
 

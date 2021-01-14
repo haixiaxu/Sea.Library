@@ -5,14 +5,19 @@
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <DocumentationFile>D:\CodeManager\github\Sea.Library\RayPI\PayPI\APIHelp.xml</DocumentationFile>
+    <DocumentationFile>D:\CodeManager\github\Sea.Library\RayPI\PayPI\bin\Debug\netcoreapp3.1\APIHelp.xml</DocumentationFile>
     <OutputPath></OutputPath>
     <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.Extensions.PlatformAbstractions" Version="1.0.0" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.4" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="5.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\RayPI.Business\RayPI.Business.csproj" />
   </ItemGroup>
 
 

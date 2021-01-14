@@ -3,7 +3,7 @@
 namespace RayPI.Entity
 {
     /// <summary>
-    /// 
+    ///    学生实体
     /// </summary>
    // [SugarTable("Student")]
     public class Student

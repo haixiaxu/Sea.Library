@@ -4,4 +4,9 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\RayPI.Entity\RayPI.Entity.csproj" />
+    <ProjectReference Include="..\RayPI.Model\RayPI.Model.csproj" />
+  </ItemGroup>
+
 </Project>
